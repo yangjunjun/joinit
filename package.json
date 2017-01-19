@@ -1,0 +1,13 @@
+{
+  "name": "joinit",
+  "version": "0.0.1",
+  "description": "http server framework just like connect",
+  "main": "test.js",
+  "repository": "https://github.com/yangjunjun/joinit",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["joinit", "http", "framework", "connect"],
+  "author": "yangjunjun <giiss@qq.com> (https://github.com/yangjunjun)",
+  "license": "MIT"
+}
