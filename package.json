@@ -5,9 +5,18 @@
   "main": "test.js",
   "repository": "https://github.com/yangjunjun/joinit",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
-  "keywords": ["joinit", "http", "framework", "connect"],
+  "keywords": [
+    "joinit",
+    "http",
+    "framework",
+    "connect"
+  ],
   "author": "yangjunjun <giiss@qq.com> (https://github.com/yangjunjun)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  }
 }
