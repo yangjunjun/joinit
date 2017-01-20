@@ -51,11 +51,25 @@ describe('joinit', function(){
     let server = http.createServer(handler);
 
     request(server)
-    .get('/')
-    .expect(function(res){
-      assert.equal(res.text, "hello joinit");
-    })    
-    .expect(200, done);
+    .get('/')   
+    .expect(200, "hello joinit", done);
   })
+
+  it('中间件', function(done){
+    let app = joinit();
+
+    app.use(function(req, res, next){
+      res.write("hello ");
+      next();
+    });
+
+    app.use(function(req, res){
+      res.end("joinit");
+    });
+
+    request(app)
+      .get('/')
+      .expect(200, "hello joinit", done);
+  });
 
 })
