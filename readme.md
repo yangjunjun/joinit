@@ -1,12 +1,20 @@
 # joinit
 
+ joinit is a node HTTP server framework just like [connect](https://github.com/senchalabs/connect).
+
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 
-  joinit is a node HTTP server framework just like [connect](https://github.com/senchalabs/connect).
+```
+const joinit = require('joinit');
+const app = joinit();
 
-## Usage
+app.use(function (req, res) {
+  res.end('ok');
+});
 
+app.listen(3000);
+```
 
 
 
